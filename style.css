@@ -1,99 +1,68 @@
-/* --- Basic Reset --- */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-/* --- Body --- */
 body {
-  background-color: #000;
-  color: #00ff88;
-  font-family: 'Share Tech Mono', monospace;
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background-color: #0d1117;
+  color: #e0e0e0;
+  height: 100vh;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  height: 100vh;
-  text-align: center;
-  overflow: hidden;
+  justify-content: center;
 }
 
-/* --- Header (typing area) --- */
-header {
-  position: absolute;
-  top: 20px;
-  left: 20px;
+canvas#particles {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+}
+
+header, main {
+  position: relative;
+  z-index: 2;
 }
 
 .site-name {
-  color: #00ff88;
-  font-size: 1.1rem;
-  letter-spacing: 1px;
-  white-space: pre;
-}
-
-/* blinking cursor */
-.cursor::after {
-  content: "|";
-  animation: blink 0.8s steps(1) infinite;
-}
-
-@keyframes blink {
-  50% { opacity: 0; }
-}
-
-/* --- Main Text --- */
-main h1 {
-  font-size: 2.5rem;
-  margin-bottom: 10px;
-  text-shadow: 0 0 5px #00ff88, 0 0 15px #00ff88;
-  opacity: 0;
-  transform: translateY(20px);
-  animation: fadeUp 1s ease forwards;
-  animation-delay: 1.5s;
-}
-
-main p {
-  font-size: 1.1rem;
-  color: #80ffb3;
-  margin-bottom: 30px;
-  text-shadow: 0 0 5px #00ff88;
-  opacity: 0;
-  transform: translateY(20px);
-  animation: fadeUp 1s ease forwards;
-  animation-delay: 1.8s;
-}
-
-/* --- Button --- */
-.btn {
-  text-decoration: none;
-  color: #000;
-  background-color: #00ff88;
-  padding: 12px 28px;
-  border-radius: 5px;
+  position: absolute;
+  top: 20px;
+  left: 30px;
   font-weight: 600;
-  transition: all 0.3s ease;
-  opacity: 0;
-  transform: translateY(20px);
-  animation: fadeUp 1s ease forwards;
-  animation-delay: 2.1s;
+  color: #00ff88;
+  letter-spacing: 1px;
 }
 
-.btn:hover {
-  background-color: #00cc66;
-  box-shadow: 0 0 10px #00ff88, 0 0 25px #00ff88;
-  transform: translateY(-2px);
+main {
+  text-align: center;
 }
 
-/* --- Animation Keyframes --- */
-@keyframes fadeUp {
-  from {
-    opacity: 0;
-    transform: translateY(25px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.mono-text {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 1.1rem;
+  color: #00ff88;
+}
+
+button {
+  background: none;
+  border: 2px solid #00ff88;
+  color: #00ff88;
+  padding: 10px 25px;
+  border-radius: 8px;
+  font-size: 1rem;
+  margin-top: 25px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+button:hover {
+  background: #00ff88;
+  color: #0d1117;
 }
