@@ -1,27 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>testing site</title>
-  <link rel="stylesheet" href="style.css" />
+
+  <!-- fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <!-- Canvas for particles (behind everything) -->
   <canvas id="particles"></canvas>
 
+  <!-- header (typing target) -->
   <header>
-    <h2 class="site-name">testing site</h2>
+    <h2 class="site-name"></h2>
   </header>
 
   <main>
-    <h1>Hey, I’m Ali.</h1>
+    <h1 class="main-title">Hey, I’m Ali.</h1>
     <p class="mono-text">I'm only testing my coding abilities</p>
-    <a href="https://t.me/iAlisalem" target="_blank">
-      <button>my tg :3</button>
+
+    <a href="https://t.me/iAlisalem" target="_blank" rel="noopener" class="btn-link">
+      <button class="btn">my tg :3</button>
     </a>
   </main>
 
+  <!-- behavior -->
   <script src="script.js"></script>
 </body>
 </html>
