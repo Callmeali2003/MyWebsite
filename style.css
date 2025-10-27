@@ -21,48 +21,58 @@ canvas#particles {
   pointer-events: none;
 }
 
-header, main {
-  position: relative;
+header {
+  position: absolute;
+  top: 30px;
+  width: 100%;
+  text-align: center;
   z-index: 2;
 }
 
 .site-name {
-  position: absolute;
-  top: 20px;
-  left: 30px;
-  font-weight: 600;
-  color: #00ff88;
-  letter-spacing: 1px;
+  color: #00ff99;
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 1.5rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
 }
 
 main {
+  position: relative;
+  z-index: 2;
   text-align: center;
+  line-height: 1.8;
 }
 
 h1 {
-  font-size: 2.5rem;
-  margin-bottom: 0.5rem;
+  font-size: 2.8rem;
+  color: #fff;
+  margin-bottom: 10px;
+  animation: fadeUp 1.3s ease-out forwards;
 }
 
-.mono-text {
+p {
   font-family: 'Share Tech Mono', monospace;
   font-size: 1.1rem;
-  color: #00ff88;
+  color: #00ff99;
+  animation: fadeUp 1.8s ease-out forwards;
 }
 
 button {
-  background: none;
-  border: 2px solid #00ff88;
-  color: #00ff88;
+  background: transparent;
+  border: 1.5px solid #00ff99;
+  color: #00ff99;
   padding: 10px 25px;
-  border-radius: 8px;
-  font-size: 1rem;
+  border-radius: 10px;
   margin-top: 25px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
   cursor: pointer;
-  transition: 0.3s ease;
+  transition: 0.3s;
+  animation: fadeUp 2.3s ease-out forwards;
 }
 
 button:hover {
-  background: #00ff88;
+  background: #00ff99;
   color: #0d1117;
 }
