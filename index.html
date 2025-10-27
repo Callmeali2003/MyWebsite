@@ -5,36 +5,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>testing site</title>
   <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Share+Tech+Mono&display=swap" rel="stylesheet">
 </head>
 <body>
+  <canvas id="particles"></canvas>
+
   <header>
-    <h2 class="site-name"></h2>
+    <h2 class="site-name">testing site</h2>
   </header>
 
   <main>
     <h1>Hey, I’m Ali.</h1>
-    <p>I'm only testing my coding abilities.</p>
-    <a href="https://t.me/iAlisalem" target="_blank" class="btn">my tg :3</a>
+    <p class="mono-text">I'm only testing my coding abilities</p>
+    <a href="https://t.me/iAlisalem" target="_blank">
+      <button>my tg :3</button>
+    </a>
   </main>
 
-  <script>
-    // Typing effect for header
-    const siteName = document.querySelector('.site-name');
-    const text = '> testing site';
-    let i = 0;
-
-    function type() {
-      if (i < text.length) {
-        siteName.textContent += text.charAt(i);
-        i++;
-        setTimeout(type, 100);
-      } else {
-        siteName.classList.add('cursor');
-      }
-    }
-
-    window.onload = type;
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>
