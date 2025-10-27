@@ -11,18 +11,14 @@ function resizeCanvas() {
 resizeCanvas();
 window.addEventListener("resize", resizeCanvas);
 
-class Particle {
-  constructor() {
-    this.reset();
-  }
-
-  reset() {
-    this.x = Math.random() * canvas.width;
-    this.y = Math.random() * canvas.height;
-    this.size = Math.random() * 2 + 1;
-    this.speedY = Math.random() * 0.8 + 0.2;
-    this.alpha = Math.random() * 0.5 + 0.5;
-  }
+particles.push({
+  x: Math.random() * canvas.width,
+  y: Math.random() * canvas.height,
+  size: Math.random() * 2 + 1,
+  speedX: (Math.random() - 0.5) * 0.1,
+  speedY: (Math.random() - 0.5) * 0.1,
+  opacity: Math.random()
+});
 
   update() {
     this.y += this.speedY;
