@@ -1,83 +1,61 @@
-/* Reset + setup */
+/* --- Basic Reset --- */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* --- Body --- */
 body {
-  background-color: #0d0d0d;
-  color: #eaeaea;
-  font-family: 'Inter', sans-serif;
-  min-height: 100vh;
+  background-color: #0a0a0a;
+  color: #00ff88;
+  font-family: 'Source Code Pro', monospace;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  height: 100vh;
   text-align: center;
-  overflow-x: hidden;
 }
 
-/* Header (site name) */
+/* --- Header --- */
 header {
-  position: fixed;
+  position: absolute;
   top: 20px;
-  left: 0;
-  width: 100%;
-  text-align: center;
+  left: 20px;
 }
 
 .site-name {
-  font-weight: 600;
-  color: #777;
+  color: #00ff88;
+  font-size: 1.1rem;
   letter-spacing: 1px;
-  font-size: 1rem;
 }
 
-/* Main section */
-main {
-  animation: fadeIn 1.2s ease-out;
-  padding: 20px;
+/* --- Main Text --- */
+main h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
 }
 
-h1 {
-  font-size: 2.8em;
-  margin-bottom: 0.4em;
-  color: #f4f4f4;
+main p {
+  font-size: 1.1rem;
+  color: #80ffb3;
+  margin-bottom: 30px;
 }
 
-p {
-  font-size: 1.1em;
-  color: #a0a0a0;
-  margin-bottom: 2em;
-}
-
-/* Button */
-button {
-  background-color: #111;
-  color: #eaeaea;
-  border: 1px solid #333;
+/* --- Button --- */
+.btn {
+  text-decoration: none;
+  color: #0a0a0a;
+  background-color: #00ff88;
   padding: 12px 28px;
-  font-size: 1em;
-  border-radius: 8px;
-  cursor: pointer;
+  border-radius: 5px;
+  font-weight: 600;
   transition: all 0.3s ease;
 }
 
-button:hover {
-  background-color: #222;
-  border-color: #555;
+.btn:hover {
+  background-color: #00cc66;
+  box-shadow: 0 0 10px #00ff88, 0 0 20px #00ff88;
   transform: translateY(-2px);
-}
-
-/* Animation */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
 }
