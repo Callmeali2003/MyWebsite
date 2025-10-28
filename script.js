@@ -81,6 +81,22 @@ function animateParticles() {
   requestAnimationFrame(animateParticles);
 }
 
+/* ---------- Glow effect for buttons ---------- */
+document.addEventListener('DOMContentLoaded', () => {
+  const buttons = document.querySelectorAll('.btn');
+  buttons.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault(); // prevent instant link jump
+      btn.classList.remove('glow');
+      void btn.offsetWidth; // restart animation
+      btn.classList.add('glow');
+      setTimeout(() => {
+        window.open(btn.parentElement.href, '_blank');
+      }, 180); // open link right after glow starts
+    });
+  });
+});
+
 /* ---------- Start sequence ---------- */
 window.addEventListener('load', () => {
   typeHeader();
