@@ -1,10 +1,8 @@
-/* Reset */
 * { box-sizing: border-box; margin: 0; padding: 0; }
 
-/* Body + stacking */
 html, body { height: 100%; }
 body {
-  font-family: 'Inter', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  font-family: 'Inter', system-ui, sans-serif;
   background: #0d1117;
   color: #e6e6e6;
   display: flex;
@@ -14,7 +12,7 @@ body {
   min-height: 100vh;
 }
 
-/* Canvas sits behind content */
+/* Canvas background */
 canvas#particles {
   position: fixed;
   inset: 0;
@@ -24,7 +22,7 @@ canvas#particles {
   pointer-events: none;
 }
 
-/* Header (typing) */
+/* Header typing */
 header {
   position: absolute;
   top: 28px;
@@ -44,16 +42,15 @@ header {
   white-space: pre;
 }
 
-/* cursor after typing (added by JS class .cursor) */
 .site-name.cursor::after {
   content: "|";
   margin-left: 4px;
   color: #00ff88;
   animation: blink 0.8s steps(1) infinite;
 }
+
 @keyframes blink { 50% { opacity: 0; } }
 
-/* Main content */
 main {
   position: relative;
   z-index: 2;
@@ -63,10 +60,9 @@ main {
   max-width: 920px;
 }
 
-/* Main title - neon green with glow */
 .main-title {
   font-size: 3.2rem;
-  color: #00ff88;          /* make H1 green */
+  color: #00ff88;
   text-shadow: 0 0 8px rgba(0,255,136,0.25), 0 0 20px rgba(0,255,136,0.12);
   margin-bottom: 20px;
   opacity: 0;
@@ -76,7 +72,6 @@ main {
   font-weight: 600;
 }
 
-/* Mono text */
 .mono-text {
   font-family: 'Share Tech Mono', monospace;
   color: #00ff88;
@@ -90,7 +85,13 @@ main {
   animation-delay: 1.0s;
 }
 
-/* Button */
+.button-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
 .btn {
   background: transparent;
   border: 1.5px solid #00ff88;
@@ -113,13 +114,11 @@ main {
   transform: translateY(-3px);
 }
 
-/* fade-up keyframe */
 @keyframes fadeUp {
   from { opacity: 0; transform: translateY(25px); }
-  to   { opacity: 1; transform: translateY(0); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
-/* small-screen tweak */
 @media (max-width: 420px) {
   .main-title { font-size: 2.4rem; }
   .site-name { letter-spacing: 4px; font-size: 1.1rem; }
